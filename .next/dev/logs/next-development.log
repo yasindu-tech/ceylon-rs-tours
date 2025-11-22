@@ -15,3 +15,13 @@
 [00:04:06.949] Server  LOG      ✓ Compiled in 32ms
 [00:04:17.096] Server  ERROR    ⨯ ReferenceError: Image is not defined
 [00:04:17.755] Browser ERROR   uncaughtError: ReferenceError: Image is not defined
+[00:13:59.367] Server  LOG      ✓ Compiled in 53ms
+[00:19:15.607] Server  LOG      ✓ Compiled in 26ms
+[00:19:17.643] Server  LOG      ✓ Compiled in 20ms
+[00:19:31.303] Server  ERROR    ⨯ ReferenceError: Link is not defined
+[00:19:31.752] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:34:25.027] Server  LOG      ✓ Compiled in 47ms
+[00:36:46.161] Server  LOG      ✓ Compiled in 28ms
+[00:36:48.121] Server  LOG      ✓ Compiled in 17ms
+[00:39:31.926] Server  LOG      ✓ Compiled in 33ms
+[00:41:49.845] Server  LOG      ✓ Compiled in 69ms

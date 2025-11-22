@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Clock, Star, ArrowRight } from "lucide-react"
+import { Clock, Star, MessageCircle } from "lucide-react"
+import Link from "next/link"
 
 const packages = [
   {
@@ -38,6 +39,8 @@ const packages = [
 ]
 
 export function Packages() {
+  const whatsappNumber = "94771234567" // Replace with actual number
+
   return (
     <section id="packages" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -82,8 +85,16 @@ export function Packages() {
                 </h3>
                 <p className="text-sm text-dark-grey/70 mb-6 line-clamp-3 flex-grow">{pkg.description}</p>
 
-                <Button className="w-full bg-off-white hover:bg-ocean-blue text-ocean-blue hover:text-white border border-ocean-blue/20 group-hover:border-transparent transition-all rounded-xl">
-                  View Details <ArrowRight className="w-4 h-4 ml-2" />
+                <Button
+                  asChild
+                  className="w-full bg-off-white hover:bg-green-600 text-ocean-blue hover:text-white border border-ocean-blue/20 group-hover:border-transparent transition-all rounded-xl"
+                >
+                  <Link
+                    href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in booking the ${pkg.title} package.`}
+                    target="_blank"
+                  >
+                    Book via WhatsApp <MessageCircle className="w-4 h-4 ml-2" />
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -91,8 +102,13 @@ export function Packages() {
         </div>
 
         <div className="mt-16 text-center">
-          <Button className="bg-deep-navy hover:bg-ocean-blue text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105">
-            View All Packages
+          <Button
+            asChild
+            className="bg-deep-navy hover:bg-ocean-blue text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105"
+          >
+            <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I'd like to inquire about your tour packages.`} target="_blank">
+              Inquire Now
+            </Link>
           </Button>
         </div>
       </div>

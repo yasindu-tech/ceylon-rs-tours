@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -38,14 +39,17 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-6 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
-          <Button className="bg-gradient-to-r from-tropical-turquoise to-ocean-blue hover:brightness-110 text-white border-none rounded-full px-8 py-6 text-lg shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-transform hover:scale-105">
-            Explore Packages
+          <Button asChild className="bg-gradient-to-r from-tropical-turquoise to-ocean-blue hover:brightness-110 text-white border-none rounded-full px-8 py-6 text-lg shadow-[0_8px_24px_rgba(0,0,0,0.2)] transition-transform hover:scale-105">
+            <Link href="#packages">Explore Packages</Link>
           </Button>
           <Button
+            asChild
             variant="outline"
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-navy rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-transform hover:scale-105"
           >
-            Plan Your Trip
+            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+              Plan Your Trip
+            </Link>
           </Button>
         </div>
 

@@ -1,58 +1,85 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
 const galleryImages = [
   {
-    src: "/sri-lankan-dancers.png",
-    alt: "Traditional Kandyan Dancers",
+    src: "/customer-airport-welcome.jpg",
+    alt: "Warm Welcome to Sri Lanka",
+    class: "md:col-span-2 md:row-span-2",
+  },
+  {
+    src: "/customer-group-mountains.jpg",
+    alt: "Hill Country Adventures",
     class: "md:row-span-2",
   },
   {
-    src: "/beach-sunset.png",
-    alt: "Golden Sunsets",
-    class: "",
-  },
-  {
-    src: "/temple-ruins.png",
-    alt: "Ancient History",
-    class: "",
-  },
-  {
-    src: "/kandy-perahera.png",
-    alt: "Kandy Esala Perahera",
+    src: "/customer-transport-mountains.jpg",
+    alt: "Premium Transport Service",
     class: "md:row-span-2",
   },
   {
-    src: "/hero-sri-lanka.png",
-    alt: "Scenic Landscapes",
-    class: "",
+    src: "/customer-galle-fort.jpg",
+    alt: "Exploring Galle Fort",
+    class: "md:col-span-2",
   },
   {
-    src: "/beach-sunset.png",
-    alt: "Coastal Vibes",
-    class: "",
+    src: "/customer-elephant-encounter.jpg",
+    alt: "Unforgettable Elephant Encounters",
+    class: "col-span-1 row-span-1",
+  },
+  {
+    src: "/customer-couple-colonial.jpg",
+    alt: "Exploring Colonial Heritage",
+    class: "col-span-1 row-span-1",
+  },
+  {
+    src: "/customer-couple-viewpoint.jpg",
+    alt: "Breathtaking Views",
+    class: "col-span-1 row-span-1",
+  },
+  {
+    src: "/customer-airport-welcome-2.jpg",
+    alt: "Another Happy Arrival",
+    class: "col-span-1 row-span-1",
+  },
+  {
+    src: "/customer-botanical-gardens.jpg",
+    alt: "Botanical Gardens Walk",
+    class: "col-span-1 row-span-1",
+  },
+  {
+    src: "/customer-king-coconut.jpg",
+    alt: "Refreshing King Coconuts",
+    class: "col-span-1 row-span-1",
   },
 ]
 
 export function Gallery() {
+  const [isExpanded, setIsExpanded] = useState(false)
+  const initialItems = 3
+  const visibleImages = isExpanded ? galleryImages : galleryImages.slice(0, initialItems)
+
   return (
     <section id="gallery" className="py-24 bg-off-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-tropical-turquoise font-semibold tracking-wider uppercase text-sm">Travel Gallery</span>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-deep-navy mt-3">Moments from Ceylon</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-deep-navy mt-3">Our Happy Travelers</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[800px] md:h-[600px]">
-          {/* Custom Masonry-style Grid using CSS Grid */}
-          {galleryImages.map((img, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+          {visibleImages.map((img, i) => (
             <div
               key={i}
-              className={`relative rounded-2xl overflow-hidden group ${i === 0
-                  ? "col-span-2 row-span-2"
-                  : i === 3
-                    ? "col-span-1 row-span-2 md:col-span-1"
-                    : "col-span-1 row-span-1"
-                }`}
+              className={cn(
+                "relative rounded-2xl overflow-hidden group transition-all duration-500",
+                img.class || "col-span-1 row-span-1"
+              )}
             >
               <Image
                 src={img.src || "/placeholder.svg"}
@@ -67,6 +94,26 @@ export function Gallery() {
             </div>
           ))}
         </div>
+
+        {galleryImages.length > initialItems && (
+          <div className="mt-12 text-center">
+            <Button
+              onClick={() => setIsExpanded(!isExpanded)}
+              variant="outline"
+              className="border-ocean-blue text-ocean-blue hover:bg-ocean-blue hover:text-white rounded-full px-8 py-6 text-lg transition-all"
+            >
+              {isExpanded ? (
+                <>
+                  View Less <ChevronUp className="ml-2 w-4 h-4" />
+                </>
+              ) : (
+                <>
+                  View More <ChevronDown className="ml-2 w-4 h-4" />
+                </>
+              )}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   )

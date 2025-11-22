@@ -30,7 +30,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-white/20">
             <Image
-              src="/logo.png"
+              src="/logo.svg"
               alt="Ceylon RS Tours Logo"
               fill
               className="object-cover"
@@ -61,6 +61,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button
+            asChild
             className={cn(
               "rounded-full px-6 font-semibold transition-all hover:scale-105",
               isScrolled
@@ -68,7 +69,9 @@ export function Navbar() {
                 : "bg-white text-ocean-blue hover:bg-off-white",
             )}
           >
-            Plan Your Trip
+            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+              Plan Your Trip
+            </Link>
           </Button>
         </div>
 
@@ -99,8 +102,10 @@ export function Navbar() {
               {item}
             </Link>
           ))}
-          <Button className="w-full bg-ocean-blue hover:bg-deep-navy text-white rounded-full py-6 text-lg">
-            Plan Your Trip
+          <Button asChild className="w-full bg-ocean-blue hover:bg-deep-navy text-white rounded-full py-6 text-lg">
+            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+              Plan Your Trip
+            </Link>
           </Button>
         </div>
       )}

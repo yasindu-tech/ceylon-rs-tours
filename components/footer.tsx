@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="relative w-10 h-10 overflow-hidden rounded-full border border-white/20">
                 <Image
-                  src="/logo.png"
+                  src="/logo.svg"
                   alt="Ceylon RS Tours Logo"
                   fill
                   className="object-cover"
