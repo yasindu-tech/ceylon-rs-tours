@@ -1,0 +1,101 @@
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Clock, Star, ArrowRight } from "lucide-react"
+
+const packages = [
+  {
+    title: "Ancient Cities & Temples",
+    duration: "5 Days",
+    price: "From $499",
+    image: "/temple-ruins.png",
+    rating: "4.9",
+    description: "Explore the majestic ruins of Polonnaruwa and Anuradhapura, witnessing the grandeur of ancient Sri Lanka.",
+  },
+  {
+    title: "Golden Beaches & Sunsets",
+    duration: "3 Days",
+    price: "From $299",
+    image: "/beach-sunset.png",
+    rating: "4.8",
+    description: "Relax on the pristine golden sands of the southern coast, surrounded by coconut palms and turquoise waters.",
+  },
+  {
+    title: "Kandy Esala Perahera",
+    duration: "4 Days",
+    price: "From $599",
+    image: "/kandy-perahera.png",
+    rating: "5.0",
+    description: "Witness the spectacular Festival of the Tooth, featuring elegant elephants, fire dancers, and traditional drummers.",
+  },
+  {
+    title: "Traditional Arts & Culture",
+    duration: "6 Days",
+    price: "From $549",
+    image: "/sri-lankan-dancers.png",
+    rating: "4.9",
+    description: "Immerse yourself in the rich cultural heritage of Sri Lanka with traditional Kandyan dance performances and rituals.",
+  },
+]
+
+export function Packages() {
+  return (
+    <section id="packages" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-tropical-turquoise font-semibold tracking-wider uppercase text-sm">
+            Popular Destinations
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-deep-navy mt-3">Our Most Popular Packages</h2>
+          <p className="text-dark-grey/70 mt-4 text-lg">
+            Handpicked itineraries designed to give you the best experience of Sri Lanka in the time you have.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {packages.map((pkg, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl overflow-hidden border border-light-grey hover:border-ocean-blue/30 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src={pkg.image || "/placeholder.svg"}
+                  alt={pkg.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-deep-navy shadow-sm flex items-center gap-1">
+                  <Star className="w-3 h-3 text-golden-sand fill-current" /> {pkg.rating}
+                </div>
+                <div className="absolute bottom-4 left-4 bg-ocean-blue text-white px-3 py-1 rounded-lg text-sm font-semibold shadow-md">
+                  {pkg.price}
+                </div>
+              </div>
+
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex items-center gap-2 text-sm text-dark-grey/60 mb-3">
+                  <Clock className="w-4 h-4" />
+                  <span>{pkg.duration}</span>
+                </div>
+                <h3 className="font-serif text-xl font-bold text-deep-navy mb-3 group-hover:text-ocean-blue transition-colors">
+                  {pkg.title}
+                </h3>
+                <p className="text-sm text-dark-grey/70 mb-6 line-clamp-3 flex-grow">{pkg.description}</p>
+
+                <Button className="w-full bg-off-white hover:bg-ocean-blue text-ocean-blue hover:text-white border border-ocean-blue/20 group-hover:border-transparent transition-all rounded-xl">
+                  View Details <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Button className="bg-deep-navy hover:bg-ocean-blue text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105">
+            View All Packages
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}

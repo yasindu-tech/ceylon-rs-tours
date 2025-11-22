@@ -1,0 +1,17 @@
+[00:00:01.917] Server  LOG     
+[00:00:01.917] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.917] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.917] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:01.917] Server  LOG     
+[00:00:01.917] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:01.917] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:01.917] Server  LOG     
+[00:00:01.981] Server  LOG      ✓ Ready in 1809ms
+[00:04:05.817] Server  LOG      ✓ Compiled in 121ms
+[00:04:05.914] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[00:04:06.921] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:04:06.949] Server  LOG      ✓ Compiled in 32ms
+[00:04:17.096] Server  ERROR    ⨯ ReferenceError: Image is not defined
+[00:04:17.755] Browser ERROR   uncaughtError: ReferenceError: Image is not defined
