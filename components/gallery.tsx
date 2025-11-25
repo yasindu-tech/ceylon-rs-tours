@@ -65,11 +65,11 @@ export function Gallery() {
   const visibleImages = isExpanded ? galleryImages : galleryImages.slice(0, initialItems)
 
   return (
-    <section id="gallery" className="py-24 bg-off-white">
+    <section id="gallery" className="py-24 bg-luxvio-cream">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-tropical-turquoise font-semibold tracking-wider uppercase text-sm">Travel Gallery</span>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-deep-navy mt-3">Our Happy Travelers</h2>
+          <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">Travel Gallery</span>
+          <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3">Our Happy Travelers</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
@@ -100,7 +100,7 @@ export function Gallery() {
             <Button
               onClick={() => setIsExpanded(!isExpanded)}
               variant="outline"
-              className="border-ocean-blue text-ocean-blue hover:bg-ocean-blue hover:text-white rounded-full px-8 py-6 text-lg transition-all"
+              className="border-luxvio-teal text-luxvio-teal hover:bg-luxvio-teal hover:text-white rounded-full px-8 py-6 text-lg transition-all"
             >
               {isExpanded ? (
                 <>

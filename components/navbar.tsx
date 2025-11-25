@@ -28,22 +28,32 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-white/20">
+          <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-luxvio-gold/50">
             <Image
-              src="/logo.svg"
-              alt="Ceylon RS Tours Logo"
+              src="/luxvio-logo.jpg"
+              alt="Luxvio Ceylon Logo"
               fill
               className="object-cover"
             />
           </div>
-          <span
-            className={cn(
-              "font-serif text-2xl font-bold tracking-tighter transition-colors",
-              isScrolled ? "text-deep-navy" : "text-white",
-            )}
-          >
-            Ceylon RS Tours
-          </span>
+          <div className="flex flex-col">
+            <span
+              className={cn(
+                "font-cursive text-3xl font-bold leading-none transition-colors",
+                isScrolled ? "text-luxvio-teal" : "text-luxvio-gold",
+              )}
+            >
+              Luxvio
+            </span>
+            <span
+              className={cn(
+                "font-serif text-xs tracking-[0.2em] uppercase transition-colors",
+                isScrolled ? "text-luxvio-charcoal" : "text-white/90",
+              )}
+            >
+              Ceylon
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -53,8 +63,8 @@ export function Navbar() {
               key={item}
               href={`#${item.toLowerCase()}`}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-tropical-turquoise",
-                isScrolled ? "text-dark-grey" : "text-white/90",
+                "text-sm font-medium transition-colors hover:text-luxvio-gold",
+                isScrolled ? "text-luxvio-charcoal" : "text-white/90",
               )}
             >
               {item}
@@ -65,8 +75,8 @@ export function Navbar() {
             className={cn(
               "rounded-full px-6 font-semibold transition-all hover:scale-105",
               isScrolled
-                ? "bg-ocean-blue hover:bg-deep-navy text-white"
-                : "bg-white text-ocean-blue hover:bg-off-white",
+                ? "bg-luxvio-teal hover:bg-luxvio-teal/90 text-white"
+                : "bg-white text-luxvio-teal hover:bg-luxvio-cream",
             )}
           >
             <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
@@ -82,9 +92,9 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? "text-dark-grey" : "text-white"} />
+            <X className={isScrolled ? "text-luxvio-charcoal" : "text-white"} />
           ) : (
-            <Menu className={isScrolled ? "text-dark-grey" : "text-white"} />
+            <Menu className={isScrolled ? "text-luxvio-charcoal" : "text-white"} />
           )}
         </button>
       </div>
@@ -96,13 +106,13 @@ export function Navbar() {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-lg font-medium text-dark-grey hover:text-ocean-blue border-b border-light-grey pb-2"
+              className="text-lg font-medium text-luxvio-charcoal hover:text-luxvio-teal border-b border-luxvio-cream pb-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item}
             </Link>
           ))}
-          <Button asChild className="w-full bg-ocean-blue hover:bg-deep-navy text-white rounded-full py-6 text-lg">
+          <Button asChild className="w-full bg-luxvio-teal hover:bg-luxvio-teal/90 text-white rounded-full py-6 text-lg">
             <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
               Plan Your Trip
             </Link>

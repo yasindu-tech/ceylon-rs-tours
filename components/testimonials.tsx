@@ -35,18 +35,18 @@ const testimonials = [
 
 export function Testimonials() {
     return (
-        <section className="py-24 bg-off-white relative overflow-hidden">
+        <section className="py-24 bg-luxvio-cream relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 -left-20 w-96 h-96 bg-tropical-turquoise/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 -right-20 w-96 h-96 bg-golden-sand/5 rounded-full blur-3xl" />
+                <div className="absolute top-20 -left-20 w-96 h-96 bg-luxvio-teal/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 -right-20 w-96 h-96 bg-luxvio-gold/5 rounded-full blur-3xl" />
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-tropical-turquoise font-semibold tracking-wider uppercase text-sm">Guest Love</span>
-                    <h2 className="font-serif text-4xl md:text-5xl font-bold text-deep-navy mt-3">Messages from the Road</h2>
-                    <p className="text-dark-grey/70 mt-4 text-lg">
+                    <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">Guest Love</span>
+                    <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3">Messages from the Road</h2>
+                    <p className="text-luxvio-charcoal/70 mt-4 text-lg">
                         Real feedback from our happy travelers.
                     </p>
                 </div>
@@ -55,10 +55,10 @@ export function Testimonials() {
                     {testimonials.map((msg, index) => (
                         <div
                             key={msg.id}
-                            className="bg-white rounded-3xl p-8 shadow-lg border border-light-grey/50 hover:shadow-xl transition-all duration-300 group relative"
+                            className="bg-white rounded-3xl p-8 shadow-lg border border-luxvio-cream hover:border-luxvio-gold/30 hover:shadow-xl transition-all duration-300 group relative"
                         >
                             {/* Message Icon Badge */}
-                            <div className="absolute -top-4 -right-4 bg-ocean-blue text-white p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">
+                            <div className="absolute -top-4 -right-4 bg-luxvio-teal text-white p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">
                                 <MessageCircle className="w-6 h-6" />
                             </div>
 
@@ -69,7 +69,7 @@ export function Testimonials() {
                                         src={msg.image}
                                         alt={msg.name}
                                         fill
-                                        className="object-cover rounded-full border-4 border-off-white shadow-sm"
+                                        className="object-cover rounded-full border-4 border-luxvio-cream shadow-sm"
                                     />
                                     <div className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 border-4 border-white rounded-full"></div>
                                 </div>
@@ -78,16 +78,16 @@ export function Testimonials() {
                                 <div className="flex-grow">
                                     <div className="flex justify-between items-start mb-2">
                                         <div>
-                                            <h3 className="font-serif text-xl font-bold text-deep-navy">{msg.name}</h3>
-                                            <p className="text-xs text-tropical-turquoise font-semibold uppercase tracking-wide">
+                                            <h3 className="font-serif text-xl font-bold text-luxvio-teal">{msg.name}</h3>
+                                            <p className="text-xs text-luxvio-gold font-semibold uppercase tracking-wide">
                                                 {msg.location}
                                             </p>
                                         </div>
-                                        <Quote className="w-8 h-8 text-golden-sand/20 fill-current" />
+                                        <Quote className="w-8 h-8 text-luxvio-gold/20 fill-current" />
                                     </div>
 
-                                    <div className="bg-off-white/50 rounded-2xl rounded-tl-none p-4 mt-2 border border-light-grey/30">
-                                        <p className="text-dark-grey/80 leading-relaxed italic">"{msg.message}"</p>
+                                    <div className="bg-luxvio-cream/50 rounded-2xl rounded-tl-none p-4 mt-2 border border-luxvio-teal/5">
+                                        <p className="text-luxvio-charcoal/80 leading-relaxed italic">"{msg.message}"</p>
                                     </div>
                                 </div>
                             </div>

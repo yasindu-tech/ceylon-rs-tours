@@ -117,15 +117,18 @@
 @theme {
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-poppins);
+  --font-cursive: var(--font-dancing-script);
 
-  --color-ocean-blue: #005F56;
-  --color-deep-navy: #8D153A;
-  --color-tropical-turquoise: #E35205;
-  --color-golden-sand: #FFBE29;
-  --color-sunset-orange: #eb5e28;
-  --color-off-white: #fcfbf9;
-  --color-light-grey: #e6e2dd;
-  --color-dark-grey: #2b1b1b;
+  --color-luxvio-teal: #003B36;
+  --color-luxvio-gold: #C5A059;
+  --color-luxvio-cream: #F5F5F0;
+  --color-luxvio-charcoal: #1A1A1A;
+
+  /* Mapping to semantic names for easier refactoring if needed, or use directly */
+  --color-primary: var(--color-luxvio-teal);
+  --color-accent: var(--color-luxvio-gold);
+  --color-background: var(--color-luxvio-cream);
+  --color-foreground: var(--color-luxvio-charcoal);
 
   --radius: 0.75rem;
 }
@@ -134,6 +137,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
