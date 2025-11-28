@@ -47,7 +47,7 @@ export function Hero() {
             variant="outline"
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-luxvio-teal rounded-full px-8 py-6 text-lg backdrop-blur-sm transition-transform hover:scale-105"
           >
-            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
               Plan Your Trip
             </Link>
           </Button>

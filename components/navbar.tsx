@@ -79,7 +79,7 @@ export function Navbar() {
                 : "bg-white text-luxvio-teal hover:bg-luxvio-cream",
             )}
           >
-            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
               Plan Your Trip
             </Link>
           </Button>
@@ -113,7 +113,7 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild className="w-full bg-luxvio-teal hover:bg-luxvio-teal/90 text-white rounded-full py-6 text-lg">
-            <Link href="https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
               Plan Your Trip
             </Link>
           </Button>

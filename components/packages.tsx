@@ -39,7 +39,7 @@ const packages = [
 ]
 
 export function Packages() {
-  const whatsappNumber = "94771234567" // Replace with actual number
+  const whatsappNumber = "94778574816" // Replace with actual number
 
   return (
     <section id="packages" className="py-24 bg-white">

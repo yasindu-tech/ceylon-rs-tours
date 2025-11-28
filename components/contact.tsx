@@ -33,7 +33,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">Call / WhatsApp</p>
-                  <p className="text-white/70 mt-1">+94 77 123 4567</p>
+                  <p className="text-white/70 mt-1">+94 778574816</p>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">Email Us</p>
-                  <p className="text-white/70 mt-1">hello@ceylonrstours.com</p>
+                  <p className="text-white/70 mt-1">luxvioceylon@gmail.com</p>
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">Visit Us</p>
-                  <p className="text-white/70 mt-1">No. 45, Galle Road, Colombo 03, Sri Lanka</p>
+                  <p className="text-white/70 mt-1">Mayakaduwa Road, Imaduwa , Galle</p>
                 </div>
               </div>
             </div>
