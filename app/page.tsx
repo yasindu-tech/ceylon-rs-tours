@@ -6,6 +6,7 @@ import { Gallery } from "@/components/gallery"
 import { Testimonials } from "@/components/testimonials"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { TaxiService } from "@/components/taxi-service"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Packages />
+      <TaxiService />
       <Gallery />
       <Testimonials />
       <Contact />

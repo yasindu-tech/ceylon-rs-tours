@@ -7,7 +7,7 @@ const packages = [
   {
     title: "Ancient Cities & Temples",
     duration: "5 Days",
-    price: "From $499",
+    price: "From $375",
     image: "/temple-ruins.png",
     rating: "4.9",
     description: "Explore the majestic ruins of Polonnaruwa and Anuradhapura, witnessing the grandeur of ancient Sri Lanka.",
@@ -15,23 +15,23 @@ const packages = [
   {
     title: "Golden Beaches & Sunsets",
     duration: "3 Days",
-    price: "From $299",
+    price: "From $225",
     image: "/beach-sunset.png",
     rating: "4.8",
     description: "Relax on the pristine golden sands of the southern coast, surrounded by coconut palms and turquoise waters.",
   },
   {
-    title: "Kandy Esala Perahera",
+    title: "Mini Tour Around Srilanka",
     duration: "4 Days",
-    price: "From $599",
-    image: "/kandy-perahera.png",
+    price: "From $300",
+    image: "/mini-tour-sri-lanka.png",
     rating: "5.0",
-    description: "Witness the spectacular Festival of the Tooth, featuring elegant elephants, fire dancers, and traditional drummers.",
+    description: "Experience the highlights of Sri Lanka in a compact tour, visiting key cultural sites and scenic spots.",
   },
   {
     title: "Traditional Arts & Culture",
     duration: "6 Days",
-    price: "From $549",
+    price: "From $450",
     image: "/sri-lankan-dancers.png",
     rating: "4.9",
     description: "Immerse yourself in the rich cultural heritage of Sri Lanka with traditional Kandyan dance performances and rituals.",
@@ -106,8 +106,8 @@ export function Packages() {
             asChild
             className="bg-luxvio-teal hover:bg-luxvio-gold text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105"
           >
-            <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I'd like to inquire about your tour packages.`} target="_blank">
-              Inquire Now
+            <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I'd like to customize a tour package.`} target="_blank">
+              Customize Your Tour
             </Link>
           </Button>
         </div>

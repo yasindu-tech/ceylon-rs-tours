@@ -191,7 +191,7 @@ function Navbar() {
                                 asChild: true,
                                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("rounded-full px-6 font-semibold transition-all hover:scale-105", isScrolled ? "bg-luxvio-teal hover:bg-luxvio-teal/90 text-white" : "bg-white text-luxvio-teal hover:bg-luxvio-cream"),
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    href: "https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka.",
+                                    href: "https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka.",
                                     target: "_blank",
                                     children: "Plan Your Trip"
                                 }, void 0, false, {
@@ -260,7 +260,7 @@ function Navbar() {
                         asChild: true,
                         className: "w-full bg-luxvio-teal hover:bg-luxvio-teal/90 text-white rounded-full py-6 text-lg",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: "https://wa.me/94771234567?text=Hi, I'm interested in planning a trip to Sri Lanka.",
+                            href: "https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka.",
                             target: "_blank",
                             children: "Plan Your Trip"
                         }, void 0, false, {

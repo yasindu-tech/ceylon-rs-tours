@@ -24,7 +24,7 @@ const dancingScript = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  title: "Ceylon RS Tours | Discover Sri Lanka",
+  title: "Luxvio Ceylon | Discover Sri Lanka",
   description: "Tailor-made tours, unforgettable experiences, and the true spirit of Ceylon.",
   generator: 'v0.app'
 }

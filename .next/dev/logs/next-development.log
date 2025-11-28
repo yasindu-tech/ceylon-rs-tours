@@ -1,5 +1,1 @@
-[00:00:00.577] Server  LOG      ✓ Ready in 403ms
-[00:04:53.773] Server  LOG      ✓ Compiled in 17ms
-[00:08:35.300] Server  LOG      ✓ Compiled in 94ms
-[00:10:09.099] Browser WARN    Image with src "/sri-lanka-map-vintage-pattern.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:00.582] Server  LOG      ✓ Ready in 396ms
