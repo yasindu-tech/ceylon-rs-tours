@@ -39,18 +39,18 @@ export function About() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-500">
-                  <Image src="/sri-lanka-tea-plucker.jpg" alt="Tea Plucker" fill className="object-cover" />
+                  <Image src="/sri-lanka-tea-plucker.jpg" alt="Tea Plucker" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-500">
-                  <Image src="/sri-lanka-elephant-orphanage.jpg" alt="Elephants" fill className="object-cover" />
+                  <Image src="/sri-lanka-elephant-orphanage.jpg" alt="Elephants" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-500">
-                  <Image src="/sri-lanka-sigiriya-rock-fortress.jpg" alt="Sigiriya" fill className="object-cover" />
+                  <Image src="/sri-lanka-sigiriya-rock-fortress.jpg" alt="Sigiriya" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-500">
-                  <Image src="/sri-lanka-mirissa-beach.jpg" alt="Beach" fill className="object-cover" />
+                  <Image src="/sri-lanka-mirissa-beach.jpg" alt="Beach" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
               </div>
             </div>

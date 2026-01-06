@@ -33,6 +33,7 @@ export function Navbar() {
               src="/luxvio-logo.jpg"
               alt="Luxvio Ceylon Logo"
               fill
+              sizes="48px"
               className="object-cover"
             />
           </div>

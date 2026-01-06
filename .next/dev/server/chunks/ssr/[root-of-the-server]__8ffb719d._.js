@@ -142,7 +142,7 @@ function Hero() {
                 className: "absolute inset-0 z-0",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                        src: "/hero-sri-lanka.png",
+                        src: "/hero-sri-lanka.jpg",
                         alt: "Sri Lanka Landscape",
                         fill: true,
                         className: "object-cover",
@@ -433,6 +433,7 @@ function About() {
                                                         src: "/sri-lanka-tea-plucker.jpg",
                                                         alt: "Tea Plucker",
                                                         fill: true,
+                                                        sizes: "(max-width: 1024px) 50vw, 25vw",
                                                         className: "object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/about.tsx",
@@ -450,6 +451,7 @@ function About() {
                                                         src: "/sri-lanka-elephant-orphanage.jpg",
                                                         alt: "Elephants",
                                                         fill: true,
+                                                        sizes: "(max-width: 1024px) 50vw, 25vw",
                                                         className: "object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/about.tsx",
@@ -476,6 +478,7 @@ function About() {
                                                         src: "/sri-lanka-sigiriya-rock-fortress.jpg",
                                                         alt: "Sigiriya",
                                                         fill: true,
+                                                        sizes: "(max-width: 1024px) 50vw, 25vw",
                                                         className: "object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/about.tsx",
@@ -493,6 +496,7 @@ function About() {
                                                         src: "/sri-lanka-mirissa-beach.jpg",
                                                         alt: "Beach",
                                                         fill: true,
+                                                        sizes: "(max-width: 1024px) 50vw, 25vw",
                                                         className: "object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/about.tsx",
@@ -675,7 +679,7 @@ const packages = [
         title: "Ancient Cities & Temples",
         duration: "5 Days",
         price: "From $375",
-        image: "/temple-ruins.png",
+        image: "/temple-ruins.jpg",
         rating: "4.9",
         description: "Explore the majestic ruins of Polonnaruwa and Anuradhapura, witnessing the grandeur of ancient Sri Lanka."
     },
@@ -683,7 +687,7 @@ const packages = [
         title: "Golden Beaches & Sunsets",
         duration: "3 Days",
         price: "From $225",
-        image: "/beach-sunset.png",
+        image: "/beach-sunset.jpg",
         rating: "4.8",
         description: "Relax on the pristine golden sands of the southern coast, surrounded by coconut palms and turquoise waters."
     },
@@ -705,7 +709,7 @@ const packages = [
     }
 ];
 function Packages() {
-    const whatsappNumber = "94778574816" // Replace with actual number
+    const whatsappNumber = "94717777959" // Replace with actual number
     ;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "packages",
@@ -758,6 +762,7 @@ function Packages() {
                                             src: pkg.image || "/placeholder.svg",
                                             alt: pkg.title,
                                             fill: true,
+                                            sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw",
                                             className: "object-cover transition-transform duration-700 group-hover:scale-110"
                                         }, void 0, false, {
                                             fileName: "[project]/components/packages.tsx",
@@ -771,7 +776,7 @@ function Packages() {
                                                     className: "w-3 h-3 text-luxvio-gold fill-current"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/packages.tsx",
-                                                    lineNumber: 71,
+                                                    lineNumber: 72,
                                                     columnNumber: 19
                                                 }, this),
                                                 " ",
@@ -779,7 +784,7 @@ function Packages() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 71,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -787,7 +792,7 @@ function Packages() {
                                             children: pkg.price
                                         }, void 0, false, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 74,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -806,20 +811,20 @@ function Packages() {
                                                     className: "w-4 h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/packages.tsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 81,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: pkg.duration
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/packages.tsx",
-                                                    lineNumber: 81,
+                                                    lineNumber: 82,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 80,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -827,7 +832,7 @@ function Packages() {
                                             children: pkg.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 83,
+                                            lineNumber: 84,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -835,7 +840,7 @@ function Packages() {
                                             children: pkg.description
                                         }, void 0, false, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 86,
+                                            lineNumber: 87,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -850,24 +855,24 @@ function Packages() {
                                                         className: "w-4 h-4 ml-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/packages.tsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 97,
                                                         columnNumber: 39
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/packages.tsx",
-                                                lineNumber: 92,
+                                                lineNumber: 93,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/packages.tsx",
-                                            lineNumber: 88,
+                                            lineNumber: 89,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/packages.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 79,
                                     columnNumber: 15
                                 }, this)
                             ]
@@ -892,17 +897,17 @@ function Packages() {
                             children: "Customize Your Tour"
                         }, void 0, false, {
                             fileName: "[project]/components/packages.tsx",
-                            lineNumber: 109,
+                            lineNumber: 110,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/packages.tsx",
-                        lineNumber: 105,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/packages.tsx",
-                    lineNumber: 104,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, this)
             ]
@@ -1376,7 +1381,7 @@ function Contact() {
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                             className: "text-white/70 mt-1",
-                                                            children: "+94 778574816"
+                                                            children: "+94 71 777 7959"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/contact.tsx",
                                                             lineNumber: 36,

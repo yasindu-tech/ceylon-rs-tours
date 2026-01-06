@@ -8,7 +8,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero-sri-lanka.png"
+          src="/hero-sri-lanka.jpg"
           alt="Sri Lanka Landscape"
           fill
           className="object-cover"

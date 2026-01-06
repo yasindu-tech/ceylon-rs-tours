@@ -8,7 +8,7 @@ const packages = [
     title: "Ancient Cities & Temples",
     duration: "5 Days",
     price: "From $375",
-    image: "/temple-ruins.png",
+    image: "/temple-ruins.jpg",
     rating: "4.9",
     description: "Explore the majestic ruins of Polonnaruwa and Anuradhapura, witnessing the grandeur of ancient Sri Lanka.",
   },
@@ -16,7 +16,7 @@ const packages = [
     title: "Golden Beaches & Sunsets",
     duration: "3 Days",
     price: "From $225",
-    image: "/beach-sunset.png",
+    image: "/beach-sunset.jpg",
     rating: "4.8",
     description: "Relax on the pristine golden sands of the southern coast, surrounded by coconut palms and turquoise waters.",
   },
@@ -24,7 +24,7 @@ const packages = [
     title: "Mini Tour Around Srilanka",
     duration: "4 Days",
     price: "From $300",
-    image: "/mini-tour-sri-lanka.png",
+    image: "/mini-tour-sri-lanka.jpg",
     rating: "5.0",
     description: "Experience the highlights of Sri Lanka in a compact tour, visiting key cultural sites and scenic spots.",
   },
@@ -32,7 +32,7 @@ const packages = [
     title: "Traditional Arts & Culture",
     duration: "6 Days",
     price: "From $450",
-    image: "/sri-lankan-dancers.png",
+    image: "/sri-lankan-dancers.jpg",
     rating: "4.9",
     description: "Immerse yourself in the rich cultural heritage of Sri Lanka with traditional Kandyan dance performances and rituals.",
   },
@@ -65,6 +65,7 @@ export function Packages() {
                   src={pkg.image || "/placeholder.svg"}
                   alt={pkg.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-luxvio-teal shadow-sm flex items-center gap-1">
