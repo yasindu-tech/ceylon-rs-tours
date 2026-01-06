@@ -100,3 +100,5 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:07:27.604] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:07:30.076] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:07:30.793] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:17:34.734] Server  LOG      ✓ Compiled in 100ms
+[00:17:43.952] Server  LOG      ✓ Compiled in 21ms

@@ -45,8 +45,9 @@ export const metadata: Metadata = {
     description: "Tailor-made luxury travel itineraries in Sri Lanka.",
   },
   icons: {
-    icon: "/icon",
-    apple: "/apple-icon",
+    icon: "/favicon-96x96.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 }
 
