@@ -1,6 +1,15 @@
+"use client"
+
 import Image from "next/image"
-import { MessageCircle, Quote } from "lucide-react"
+import { MessageCircle, Quote, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
+import * as React from "react"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    type CarouselApi,
+} from "@/components/ui/carousel"
 
 const testimonials = [
     {
@@ -34,6 +43,20 @@ const testimonials = [
 ]
 
 export function Testimonials() {
+    const [api, setApi] = React.useState<CarouselApi>()
+
+    React.useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        const intervalId = setInterval(() => {
+            api.scrollNext()
+        }, 4000)
+
+        return () => clearInterval(intervalId)
+    }, [api])
+
     return (
         <section className="py-24 bg-luxvio-cream relative overflow-hidden">
             {/* Decorative Background Elements */}
@@ -51,50 +74,71 @@ export function Testimonials() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {testimonials.map((msg, index) => (
-                        <div
-                            key={msg.id}
-                            className="bg-white rounded-3xl p-8 shadow-lg border border-luxvio-cream hover:border-luxvio-gold/30 hover:shadow-xl transition-all duration-300 group relative"
-                        >
-                            {/* Message Icon Badge */}
-                            <div className="absolute -top-4 -right-4 bg-luxvio-teal text-white p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">
-                                <MessageCircle className="w-6 h-6" />
-                            </div>
-
-                            <div className="flex items-start gap-6">
-                                {/* User Image */}
-                                <div className="relative w-20 h-20 flex-shrink-0">
-                                    <Image
-                                        src={msg.image}
-                                        alt={msg.name}
-                                        fill
-                                        className="object-cover rounded-full border-4 border-luxvio-cream shadow-sm"
-                                    />
-                                    <div className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 border-4 border-white rounded-full"></div>
-                                </div>
-
-                                {/* Content */}
-                                <div className="flex-grow">
-                                    <div className="flex justify-between items-start mb-2">
-                                        <div>
-                                            <h3 className="font-serif text-xl font-bold text-luxvio-teal">{msg.name}</h3>
-                                            <p className="text-xs text-luxvio-gold font-semibold uppercase tracking-wide">
-                                                {msg.location}
-                                            </p>
-                                        </div>
-                                        <Quote className="w-8 h-8 text-luxvio-gold/20 fill-current" />
+                {/* Mobile Carousel */}
+                <div className="md:hidden">
+                    <Carousel opts={{ loop: true, align: "center" }} setApi={setApi} className="w-full max-w-sm mx-auto">
+                        <CarouselContent>
+                            {testimonials.map((msg, index) => (
+                                <CarouselItem key={index} className="basis-11/12 pl-4">
+                                    <div className="h-full p-1">
+                                        <TestimonialCard msg={msg} />
                                     </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
+                </div>
 
-                                    <div className="bg-luxvio-cream/50 rounded-2xl rounded-tl-none p-4 mt-2 border border-luxvio-teal/5">
-                                        <p className="text-luxvio-charcoal/80 leading-relaxed italic">"{msg.message}"</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                {/* Desktop Grid */}
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {testimonials.map((msg) => (
+                        <TestimonialCard key={msg.id} msg={msg} />
                     ))}
                 </div>
             </div>
         </section>
+    )
+}
+
+function TestimonialCard({ msg }: { msg: any }) {
+    return (
+        <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 hover:border-luxvio-gold/30 hover:shadow-2xl transition-all duration-300 group relative h-full flex flex-col">
+            {/* Message Icon Badge */}
+            <div className="absolute -top-4 -right-4 bg-luxvio-gold text-white p-3 rounded-full shadow-md group-hover:scale-110 transition-transform">
+                <Quote className="w-6 h-6 fill-current" />
+            </div>
+
+            <div className="flex items-start gap-5">
+                {/* User Image */}
+                <div className="relative w-16 h-16 flex-shrink-0">
+                    <Image
+                        src={msg.image}
+                        alt={msg.name}
+                        fill
+                        className="object-cover rounded-full border-2 border-luxvio-cream shadow-sm"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="flex-grow">
+                    <div className="mb-3">
+                        <h3 className="font-heading text-lg font-bold text-gray-800">{msg.name}</h3>
+                        <p className="text-xs text-luxvio-gold font-bold uppercase tracking-wider font-sans">
+                            {msg.location}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mt-4 flex-grow">
+                <p className="text-gray-600 leading-relaxed italic font-sans">"{msg.message}"</p>
+            </div>
+
+            <div className="mt-6 flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-luxvio-gold fill-current" />
+                ))}
+            </div>
+        </div>
     )
 }

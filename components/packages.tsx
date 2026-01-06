@@ -1,7 +1,16 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Clock, Star, MessageCircle } from "lucide-react"
+import { Clock, Star, MessageCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import * as React from "react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel"
 
 const packages = [
   {
@@ -40,6 +49,19 @@ const packages = [
 
 export function Packages() {
   const whatsappNumber = "94717777959" // Replace with actual number
+  const [api, setApi] = React.useState<CarouselApi>()
+
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    const intervalId = setInterval(() => {
+      api.scrollNext()
+    }, 4000)
+
+    return () => clearInterval(intervalId)
+  }, [api])
 
   return (
     <section id="packages" className="py-24 bg-white">
@@ -54,51 +76,25 @@ export function Packages() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Mobile Carousel */}
+        <div className="md:hidden">
+          <Carousel opts={{ loop: true, align: "center" }} setApi={setApi} className="w-full max-w-sm mx-auto">
+            <CarouselContent>
+              {packages.map((pkg, index) => (
+                <CarouselItem key={index} className="basis-11/12 pl-4">
+                  <div className="h-full p-1">
+                    <PackageCard pkg={pkg} whatsappNumber={whatsappNumber} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {packages.map((pkg, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl overflow-hidden border border-luxvio-cream hover:border-luxvio-gold/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
-            >
-              <div className="relative h-64 overflow-hidden">
-                <Image
-                  src={pkg.image || "/placeholder.svg"}
-                  alt={pkg.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-luxvio-teal shadow-sm flex items-center gap-1">
-                  <Star className="w-3 h-3 text-luxvio-gold fill-current" /> {pkg.rating}
-                </div>
-                <div className="absolute bottom-4 left-4 bg-luxvio-teal text-white px-3 py-1 rounded-lg text-sm font-semibold shadow-md">
-                  {pkg.price}
-                </div>
-              </div>
-
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex items-center gap-2 text-sm text-luxvio-charcoal/60 mb-3">
-                  <Clock className="w-4 h-4" />
-                  <span>{pkg.duration}</span>
-                </div>
-                <h3 className="font-serif text-xl font-bold text-luxvio-teal mb-3 group-hover:text-luxvio-gold transition-colors">
-                  {pkg.title}
-                </h3>
-                <p className="text-sm text-luxvio-charcoal/70 mb-6 line-clamp-3 flex-grow">{pkg.description}</p>
-
-                <Button
-                  asChild
-                  className="w-full bg-luxvio-cream hover:bg-luxvio-teal text-luxvio-teal hover:text-white border border-luxvio-teal/20 group-hover:border-transparent transition-all rounded-xl"
-                >
-                  <Link
-                    href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in booking the ${pkg.title} package.`}
-                    target="_blank"
-                  >
-                    Book via WhatsApp <MessageCircle className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
+            <PackageCard key={index} pkg={pkg} whatsappNumber={whatsappNumber} />
           ))}
         </div>
 
@@ -114,5 +110,59 @@ export function Packages() {
         </div>
       </div>
     </section>
+  )
+}
+
+function PackageCard({ pkg, whatsappNumber }: { pkg: any; whatsappNumber: string }) {
+  return (
+    <div className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+      <div className="relative h-72 overflow-hidden">
+        <Image
+          src={pkg.image || "/placeholder.svg"}
+          alt={pkg.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-luxvio-gold shadow-sm flex items-center gap-1">
+          <Star className="w-3 h-3 fill-current" /> {pkg.rating}
+        </div>
+        {/* Gradient Overlay for bottom text visibility if needed, but we moved price down */}
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow relative">
+        <div className="absolute -top-5 left-6 bg-luxvio-gold text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg border-4 border-white">
+          {pkg.price}
+        </div>
+
+        <div className="mt-6 flex flex-col flex-grow">
+          <div className="flex items-center gap-2 text-xs font-semibold tracking-wide uppercase text-gray-400 mb-2">
+            <Clock className="w-3 h-3" />
+            <span>{pkg.duration}</span>
+          </div>
+
+          <h3 className="font-heading text-2xl font-bold text-gray-800 mb-3 group-hover:text-luxvio-gold transition-colors">
+            {pkg.title}
+          </h3>
+
+          <p className="text-sm text-gray-500 mb-6 line-clamp-3 leading-relaxed flex-grow">
+            {pkg.description}
+          </p>
+
+          <Button
+            asChild
+            variant="outline"
+            className="w-full border-luxvio-gold text-luxvio-gold hover:bg-luxvio-gold hover:text-white transition-all rounded-xl font-semibold tracking-wide flex items-center justify-center gap-2"
+          >
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in booking the ${pkg.title} package.`}
+              target="_blank"
+            >
+              View Details <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </div>
   )
 }

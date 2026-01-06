@@ -115,22 +115,32 @@
 }
 
 @theme {
-  --font-serif: var(--font-playfair);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
   --font-cursive: var(--font-dancing-script);
 
-  --color-luxvio-teal: #003B36;
-  --color-luxvio-gold: #C5A059;
-  --color-luxvio-cream: #F5F5F0;
-  --color-luxvio-charcoal: #1A1A1A;
+  /* Reference Site Colors */
+  --color-earth-800: #7D6258;
+  --color-earth-600: #A18072; /* Primary Button / Brand Color */
+  --color-earth-100: #F3EFEA;
+  
+  /* Text Colors */
+  --color-text-main: #1F2937; /* Gray-900 */
+  --color-text-body: #4B5563; /* Gray-600 */
+  --color-text-light: #9CA3AF; /* Gray-400 */
 
-  /* Mapping to semantic names for easier refactoring if needed, or use directly */
-  --color-primary: var(--color-luxvio-teal);
-  --color-accent: var(--color-luxvio-gold);
-  --color-background: var(--color-luxvio-cream);
-  --color-foreground: var(--color-luxvio-charcoal);
+  /* Semantic Mapping */
+  --color-luxvio-teal: #003B36; /* Keeping for legacy support if needed, but redefining primary */
+  --color-luxvio-gold: #A18072; /* Replaced Gold with Earth Brown for brand consistency */
+  --color-luxvio-cream: #F9FAFB; /* Light Gray Background */
+  --color-luxvio-charcoal: #1F2937;
 
-  --radius: 0.75rem;
+  --color-primary: var(--color-earth-600);
+  --color-accent: var(--color-earth-800);
+  --color-background: #ffffff;
+  --color-foreground: var(--color-text-main);
+
+  --radius: 1rem; /* More rounded as per reference */
 }
 
 @layer base {

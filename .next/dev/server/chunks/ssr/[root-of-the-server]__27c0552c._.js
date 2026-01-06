@@ -128,8 +128,9 @@ const metadata = {
         description: "Tailor-made luxury travel itineraries in Sri Lanka."
     },
     icons: {
-        icon: "/icon",
-        apple: "/apple-icon"
+        icon: "/favicon-96x96.png",
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png"
     }
 };
 function RootLayout({ children }) {
@@ -159,18 +160,18 @@ function RootLayout({ children }) {
                     }
                 }, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 62,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 60,
+            lineNumber: 61,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 59,
+        lineNumber: 60,
         columnNumber: 5
     }, this);
 }

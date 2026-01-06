@@ -102,3 +102,723 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:07:30.793] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [00:17:34.734] Server  LOG      ✓ Compiled in 100ms
 [00:17:43.952] Server  LOG      ✓ Compiled in 21ms
+[00:59:54.242] Browser WARN    Image with src "/luxury-taxi-sri-lanka.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.423] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.423] Browser WARN    Image with src "/customer-airport-welcome.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.424] Browser WARN    Image with src "/customer-transport-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.725] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.725] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:59:54.725] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:00:32.539] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:02:05.184] Server  LOG      ✓ Compiled in 69ms
+[01:02:05.400] Browser ERROR   ./components/packages.tsx:55:1
+Parsing ecmascript source code failed
+   53 | }, [api])
+   54 |
+>  55 | return (
+      | ^^^^^^^^
+>  56 |   <section id="packages" className="py-24 bg-white">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  57 |     <div className="container mx-auto px-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  58 |       <div className="text-center max-w-3xl mx-auto mb-16">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  59 |         <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  60 |           Popular Destinations
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  61 |         </span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  62 |         <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3">Our Most Popular Packages</h2>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  63 |         <p className="text-luxvio-charcoal/70 mt-4 text-lg">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |           Handpicked itineraries designed to give you the best experience of Sri Lanka in the time you have.
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |         </p>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |       {/* Mobile Carousel */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |       <div className="md:hidden">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  70 |         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi} className="w-full max-w-sm mx-auto">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |           <CarouselContent>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  72 |             {packages.map((pkg, index) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  73 |               <CarouselItem key={index} className="basis-11/12 pl-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  74 |                 <div className="h-full p-1">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  75 |                   <PackageCard pkg={pkg} whatsappNumber={whatsappNumber} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |                 </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |               </CarouselItem>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  78 |             ))}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  79 |           </CarouselContent>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  80 |         </Carousel>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  81 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  82 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |       {/* Desktop Grid */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |       <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |         {packages.map((pkg, index) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |           <PackageCard key={index} pkg={pkg} whatsappNumber={whatsappNumber} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |         ))}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |       <div className="mt-16 text-center">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |         <Button
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |           asChild
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |           className="bg-luxvio-teal hover:bg-luxvio-gold text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |         >
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |           <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I'd like to customize a tour package.`} target="_blank">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |             Customize Your Tour
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |           </Link>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |         </Button>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |   </section>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 | )
+      | ^^
+  103 | }
+  104 |
+  105 | function PackageCard({ pkg, whatsappNumber }: { pkg: any; whatsappNumber: string }) {
+
+Return statement is not allowed here
+
+Import trace:
+  Server Component:
+    ./components/packages.tsx
+    ./app/page.tsx
+[01:02:07.400] Browser ERROR   ./components/packages.tsx:62:1
+Parsing ecmascript source code failed
+   60 | }, [api])
+   61 |
+>  62 | return (
+      | ^^^^^^^^
+>  63 |   <section id="packages" className="py-24 bg-white">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  64 |     <div className="container mx-auto px-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  65 |       <div className="text-center max-w-3xl mx-auto mb-16">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  66 |         <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  67 |           Popular Destinations
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  68 |         </span>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  69 |         <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3">Our Most Popular Packages</h2>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  70 |         <p className="text-luxvio-charcoal/70 mt-4 text-lg">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  71 |           Handpicked itineraries designed to give you the best experience of Sri Lanka in the time you have.
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  72 |         </p>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  73 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  74 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  75 |       {/* Mobile Carousel */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  76 |       <div className="md:hidden">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  77 |         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi} className="w-full max-w-sm mx-auto">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  78 |           <CarouselContent>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  79 |             {packages.map((pkg, index) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  80 |               <CarouselItem key={index} className="basis-11/12 pl-4">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  81 |                 <div className="h-full p-1">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  82 |                   <PackageCard pkg={pkg} whatsappNumber={whatsappNumber} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  83 |                 </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  84 |               </CarouselItem>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  85 |             ))}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  86 |           </CarouselContent>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  87 |         </Carousel>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  88 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  89 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  90 |       {/* Desktop Grid */}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  91 |       <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  92 |         {packages.map((pkg, index) => (
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  93 |           <PackageCard key={index} pkg={pkg} whatsappNumber={whatsappNumber} />
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  94 |         ))}
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  95 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  96 |
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  97 |       <div className="mt-16 text-center">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  98 |         <Button
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  99 |           asChild
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 100 |           className="bg-luxvio-teal hover:bg-luxvio-gold text-white rounded-full px-8 py-6 text-lg shadow-lg transition-all hover:scale-105"
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 101 |         >
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 102 |           <Link href={`https://wa.me/${whatsappNumber}?text=Hi, I'd like to customize a tour package.`} target="_blank">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 103 |             Customize Your Tour
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 104 |           </Link>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 105 |         </Button>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 106 |       </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 107 |     </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 108 |   </section>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 109 | )
+      | ^^
+  110 | }
+  111 |
+  112 | function PackageCard({ pkg, whatsappNumber }: { pkg: any; whatsappNumber: string }) {
+
+Return statement is not allowed here
+
+Import trace:
+  Server Component:
+    ./components/packages.tsx
+    ./app/page.tsx
+[01:02:39.890] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:40.051] Browser ERROR   uncaughtError: TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:41.015] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:41.016] Server  ERROR    ⨯ ReferenceError: React is not defined
+[01:02:41.418] Browser ERROR   uncaughtError: TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:42.264] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:42.264] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:02:42.622] Browser ERROR   uncaughtError: TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:07.665] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:07.666] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:07.784] Browser ERROR   uncaughtError: TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:10.914] Server  ERROR    ⨯ TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:11.204] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:03:11.303] Browser ERROR   uncaughtError: TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+[01:03:11.343] Server  LOG      ✓ Compiled in 6ms
+[01:03:13.263] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:03:13.415] Server  LOG      ✓ Compiled in 0ms
+[01:03:22.693] Browser WARN    Image with src "/luxury-taxi-sri-lanka.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.314] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.314] Browser WARN    Image with src "/customer-airport-welcome.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.314] Browser WARN    Image with src "/customer-transport-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.526] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.526] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:23.774] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[01:03:24.502] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:43:31.331] Server  ERROR    ⨯ ReferenceError: playfair is not defined
+[02:43:31.386] Server  ERROR    ⨯ ReferenceError: playfair is not defined
+[02:43:33.450] Browser ERROR   uncaughtError: ReferenceError: playfair is not defined
+[02:43:33.709] Server  ERROR    ⨯ ReferenceError: playfair is not defined
+[02:43:57.253] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:43:58.249] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:43:58.249] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:43:58.249] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:43:59.160] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:44:09.938] Server  LOG      ✓ Compiled in 123ms
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:10:1
+Ecmascript file had an error
+   8 | import { cn } from "@/lib/utils"
+   9 |
+> 10 | "use client"
+     | ^^^^^^^^^^^^
+  11 |
+  12 | import { useState, useEffect } from "react"
+  13 | import Link from "next/link"
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:16:10
+Ecmascript file had an error
+  14 | import Image from "next/image"
+  15 | import { Menu, X, Search } from "lucide-react"
+> 16 | import { Button } from "@/components/ui/button"
+     |          ^^^^^^
+  17 | import { cn } from "@/lib/utils"
+  18 |
+  19 | export function Navbar() {
+
+the name `Button` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:14:8
+Ecmascript file had an error
+  12 | import { useState, useEffect } from "react"
+  13 | import Link from "next/link"
+> 14 | import Image from "next/image"
+     |        ^^^^^
+  15 | import { Menu, X, Search } from "lucide-react"
+  16 | import { Button } from "@/components/ui/button"
+  17 | import { cn } from "@/lib/utils"
+
+the name `Image` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:13:8
+Ecmascript file had an error
+  11 |
+  12 | import { useState, useEffect } from "react"
+> 13 | import Link from "next/link"
+     |        ^^^^
+  14 | import Image from "next/image"
+  15 | import { Menu, X, Search } from "lucide-react"
+  16 | import { Button } from "@/components/ui/button"
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:15:10
+Ecmascript file had an error
+  13 | import Link from "next/link"
+  14 | import Image from "next/image"
+> 15 | import { Menu, X, Search } from "lucide-react"
+     |          ^^^^
+  16 | import { Button } from "@/components/ui/button"
+  17 | import { cn } from "@/lib/utils"
+  18 |
+
+the name `Menu` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:15:16
+Ecmascript file had an error
+  13 | import Link from "next/link"
+  14 | import Image from "next/image"
+> 15 | import { Menu, X, Search } from "lucide-react"
+     |                ^
+  16 | import { Button } from "@/components/ui/button"
+  17 | import { cn } from "@/lib/utils"
+  18 |
+
+the name `X` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:17:10
+Ecmascript file had an error
+  15 | import { Menu, X, Search } from "lucide-react"
+  16 | import { Button } from "@/components/ui/button"
+> 17 | import { cn } from "@/lib/utils"
+     |          ^^
+  18 |
+  19 | export function Navbar() {
+  20 |   const [isScrolled, setIsScrolled] = useState(false)
+
+the name `cn` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:12:20
+Ecmascript file had an error
+  10 | "use client"
+  11 |
+> 12 | import { useState, useEffect } from "react"
+     |                    ^^^^^^^^^
+  13 | import Link from "next/link"
+  14 | import Image from "next/image"
+  15 | import { Menu, X, Search } from "lucide-react"
+
+the name `useEffect` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:10.041] Browser ERROR   ./components/navbar.tsx:12:10
+Ecmascript file had an error
+  10 | "use client"
+  11 |
+> 12 | import { useState, useEffect } from "react"
+     |          ^^^^^^^^
+  13 | import Link from "next/link"
+  14 | import Image from "next/image"
+  15 | import { Menu, X, Search } from "lucide-react"
+
+the name `useState` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.503] Server  LOG      ✓ Compiled in 43ms
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:14:10
+Ecmascript file had an error
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+> 14 | import { Button } from "@/components/ui/button"
+     |          ^^^^^^
+  15 | import { cn } from "@/lib/utils"
+  16 |
+  17 | export function Navbar() {
+
+the name `Button` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:12:8
+Ecmascript file had an error
+  10 | import { useState, useEffect } from "react"
+  11 | import Link from "next/link"
+> 12 | import Image from "next/image"
+     |        ^^^^^
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+
+the name `Image` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:11:8
+Ecmascript file had an error
+   9 |
+  10 | import { useState, useEffect } from "react"
+> 11 | import Link from "next/link"
+     |        ^^^^
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:13:10
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |          ^^^^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `Menu` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:13:19
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |                   ^^^^^^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `Search` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:13:16
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |                ^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `X` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:15:10
+Ecmascript file had an error
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+> 15 | import { cn } from "@/lib/utils"
+     |          ^^
+  16 |
+  17 | export function Navbar() {
+  18 |   const [isScrolled, setIsScrolled] = useState(false)
+
+the name `cn` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:10:20
+Ecmascript file had an error
+   8 | import { cn } from "@/lib/utils"
+   9 |
+> 10 | import { useState, useEffect } from "react"
+     |                    ^^^^^^^^^
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+
+the name `useEffect` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:52.610] Browser ERROR   ./components/navbar.tsx:10:10
+Ecmascript file had an error
+   8 | import { cn } from "@/lib/utils"
+   9 |
+> 10 | import { useState, useEffect } from "react"
+     |          ^^^^^^^^
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+
+the name `useState` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.761] Server  LOG      ✓ Compiled in 50ms
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:14:10
+Ecmascript file had an error
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+> 14 | import { Button } from "@/components/ui/button"
+     |          ^^^^^^
+  15 | import { cn } from "@/lib/utils"
+  16 |
+  17 | export function Navbar() {
+
+the name `Button` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:12:8
+Ecmascript file had an error
+  10 | import { useState, useEffect } from "react"
+  11 | import Link from "next/link"
+> 12 | import Image from "next/image"
+     |        ^^^^^
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+
+the name `Image` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:11:8
+Ecmascript file had an error
+   9 |
+  10 | import { useState, useEffect } from "react"
+> 11 | import Link from "next/link"
+     |        ^^^^
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+
+the name `Link` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:13:10
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |          ^^^^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `Menu` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:13:19
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |                   ^^^^^^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `Search` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:13:16
+Ecmascript file had an error
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+> 13 | import { Menu, X, Search } from "lucide-react"
+     |                ^
+  14 | import { Button } from "@/components/ui/button"
+  15 | import { cn } from "@/lib/utils"
+  16 |
+
+the name `X` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:15:10
+Ecmascript file had an error
+  13 | import { Menu, X, Search } from "lucide-react"
+  14 | import { Button } from "@/components/ui/button"
+> 15 | import { cn } from "@/lib/utils"
+     |          ^^
+  16 |
+  17 | export function Navbar() {
+  18 |   const [isScrolled, setIsScrolled] = useState(false)
+
+the name `cn` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:10:20
+Ecmascript file had an error
+   8 | import { cn } from "@/lib/utils"
+   9 |
+> 10 | import { useState, useEffect } from "react"
+     |                    ^^^^^^^^^
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+
+the name `useEffect` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:44:53.869] Browser ERROR   ./components/navbar.tsx:10:10
+Ecmascript file had an error
+   8 | import { cn } from "@/lib/utils"
+   9 |
+> 10 | import { useState, useEffect } from "react"
+     |          ^^^^^^^^
+  11 | import Link from "next/link"
+  12 | import Image from "next/image"
+  13 | import { Menu, X, Search } from "lucide-react"
+
+the name `useState` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./components/navbar.tsx
+    ./app/page.tsx
+[02:45:25.933] Server  LOG      ✓ Compiled in 67ms
+[02:45:45.218] Server  LOG      ✓ Compiled in 70ms
+[02:45:45.321] Browser ERROR   uncaughtError: ReferenceError: Star is not defined
+[02:45:46.487] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:45:46.512] Server  LOG      ✓ Compiled in 38ms
+[02:46:36.387] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:46:36.783] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:46:36.783] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:46:36.783] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:46:37.265] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:08.635] Server  LOG      ✓ Compiled in 61ms
+[02:49:08.730] Browser ERROR   uncaughtError: ReferenceError: ArrowRight is not defined
+[02:49:23.348] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:49:23.467] Server  LOG      ✓ Compiled in 47ms
+[02:49:25.166] Browser WARN    Image with src "/luxury-taxi-sri-lanka.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-airport-welcome.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-transport-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:49:25.166] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

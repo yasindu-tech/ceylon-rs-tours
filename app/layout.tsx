@@ -1,18 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Poppins, Dancing_Script } from "next/font/google"
+import { Poppins, Inter, Dancing_Script } from "next/font/google"
 import "./globals.css"
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-})
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
+  display: "swap",
+})
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 })
 
@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${playfair.variable} ${poppins.variable} ${dancingScript.variable} font-sans antialiased bg-background text-foreground`}>
+      <body className={`${poppins.variable} ${inter.variable} ${dancingScript.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
         <script
           type="application/ld+json"
