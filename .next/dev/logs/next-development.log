@@ -840,3 +840,11 @@ Import trace:
 [03:07:28.967] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [03:07:30.069] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [03:07:30.069] Browser WARN    Image with src "/tripadvisor.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/luxury-taxi-sri-lanka.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-airport-welcome.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-transport-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:11:47.310] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:12:11.270] Server  LOG      ✓ Compiled in 129ms

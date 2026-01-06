@@ -119,28 +119,31 @@
   --font-heading: var(--font-poppins);
   --font-cursive: var(--font-dancing-script);
 
-  /* Reference Site Colors */
-  --color-earth-800: #7D6258;
-  --color-earth-600: #A18072; /* Primary Button / Brand Color */
-  --color-earth-100: #F3EFEA;
-  
+  /* Restored Brand Colors */
+  --color-luxvio-teal: #003B36;
+  --color-luxvio-gold: #C5A059;
+  /* Restored to vibrant gold */
+  --color-luxvio-cream: #F5F5F0;
+  /* Restored to warm cream */
+  --color-luxvio-charcoal: #1A1A1A;
+  /* Restored to deep charcoal */
+
   /* Text Colors */
-  --color-text-main: #1F2937; /* Gray-900 */
-  --color-text-body: #4B5563; /* Gray-600 */
-  --color-text-light: #9CA3AF; /* Gray-400 */
+  --color-text-main: #1A1A1A;
+  --color-text-body: #4B5563;
+  --color-text-light: #9CA3AF;
 
-  /* Semantic Mapping */
-  --color-luxvio-teal: #003B36; /* Keeping for legacy support if needed, but redefining primary */
-  --color-luxvio-gold: #A18072; /* Replaced Gold with Earth Brown for brand consistency */
-  --color-luxvio-cream: #F9FAFB; /* Light Gray Background */
-  --color-luxvio-charcoal: #1F2937;
+  --color-earth-800: #7D6258;
+  --color-earth-600: #A18072;
+  --color-earth-100: #F3EFEA;
 
-  --color-primary: var(--color-earth-600);
-  --color-accent: var(--color-earth-800);
-  --color-background: #ffffff;
-  --color-foreground: var(--color-text-main);
+  --color-primary: var(--color-luxvio-gold);
+  /* Primary should be Gold */
+  --color-accent: var(--color-luxvio-teal);
+  --color-background: var(--color-luxvio-cream);
+  --color-foreground: var(--color-luxvio-charcoal);
 
-  --radius: 1rem; /* More rounded as per reference */
+  --radius: 1rem;
 }
 
 @layer base {
