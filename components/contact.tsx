@@ -33,7 +33,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="font-medium text-white">Call / WhatsApp</p>
-                  <p className="text-white/70 mt-1">+94 71 777 7959/p>
+                  <p className="text-white/70 mt-1">+94 71 777 7959</p>
                 </div>
               </div>
 
