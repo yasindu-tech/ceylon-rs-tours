@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
@@ -28,22 +28,39 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-teal transition-colors"
+                href="https://www.facebook.com/share/1C4uJhoejP/?mibextid=wwXIfr"
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </Link>
               <Link
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-teal transition-colors"
+                href="https://www.instagram.com/luxvio_ceylon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </Link>
               <Link
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-teal transition-colors"
+                href="https://www.tripadvisor.com/Attraction_Review-g297896-d34040771-Reviews-Luxvio_Ceylon-Galle_Galle_District_Southern_Province.html"
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors p-2"
               >
-                <Twitter className="w-5 h-5" />
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/tripadvisor.png"
+                    alt="TripAdvisor"
+                    fill
+                    className="object-contain invert brightness-0"
+                  />
+                </div>
+              </Link>
+              <Link
+                href="https://wa.me/94717777959"
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
+              >
+                <MessageCircle className="w-5 h-5" />
               </Link>
             </div>
           </div>

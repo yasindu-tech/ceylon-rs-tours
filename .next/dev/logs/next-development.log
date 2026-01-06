@@ -822,3 +822,12 @@ Import trace:
 [02:49:25.166] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [02:49:25.166] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
 [02:49:25.166] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:56:04.317] Server  LOG      ✓ Compiled in 99ms
+[02:56:04.597] Server  ERROR    ⨯ ReferenceError: MessageCircle is not defined
+[02:56:04.829] Browser ERROR   uncaughtError: ReferenceError: MessageCircle is not defined
+[02:56:43.165] Browser WARN    Image with src "/customer-group-mountains.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:56:43.337] Browser WARN    Image with src "/customer-couple-colonial.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:56:43.337] Browser WARN    Image with src "/customer-airport-welcome-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:56:43.337] Browser WARN    Image with src "/customer-elephant-encounter.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[02:56:43.595] Browser WARN    Image with src "/luxvio-logo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[03:01:17.349] Browser WARN    Image with src "/tripadvisor.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
