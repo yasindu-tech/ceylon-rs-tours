@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { getSiteSettings } from "@/lib/data/site-settings"
 
-export function Hero() {
+export async function Hero() {
+  const settings = await getSiteSettings()
+
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -43,7 +46,10 @@ export function Hero() {
             variant="outline"
             className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-luxvio-charcoal font-bold tracking-wide rounded-full px-10 py-7 text-lg backdrop-blur-sm hover:scale-105 transition-all"
           >
-            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link
+              href={`https://wa.me/${settings.phoneNumber}?text=Hi, I'm interested in planning a trip to Sri Lanka.`}
+              target="_blank"
+            >
               PLAN MY TRIP
             </Link>
           </Button>

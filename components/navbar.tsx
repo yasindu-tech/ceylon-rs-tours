@@ -3,13 +3,17 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, Search } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 
 
-export function Navbar() {
+interface NavbarProps {
+  whatsappNumber: string
+}
+
+export function Navbar({ whatsappNumber }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -63,24 +67,16 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Search Bar & Action */}
+        {/* Action */}
         <div className="hidden md:flex items-center gap-4">
-          <div className="relative hidden lg:block">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="pl-4 pr-10 py-2 rounded-full border border-gray-200 bg-gray-50 text-sm focus:outline-none focus:border-luxvio-gold/50 focus:ring-1 focus:ring-luxvio-gold/50 w-48 transition-all"
-            />
-            <button className="absolute right-1 top-1/2 -translate-y-1/2 p-1.5 bg-luxvio-gold text-white rounded-full hover:bg-earth-800 transition-colors">
-              <Search className="w-3 h-3" />
-            </button>
-          </div>
-
           <Button
             asChild
             className="rounded-full px-6 font-semibold bg-luxvio-gold hover:bg-earth-800 text-white transition-all shadow-md hover:shadow-lg"
           >
-            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in planning a trip to Sri Lanka.`}
+              target="_blank"
+            >
               Plan Trip
             </Link>
           </Button>
@@ -114,7 +110,10 @@ export function Navbar() {
             </Link>
           ))}
           <Button asChild className="w-full bg-luxvio-gold hover:bg-earth-800 text-white rounded-full py-6 text-lg mt-2">
-            <Link href="https://wa.me/94778574816?text=Hi, I'm interested in planning a trip to Sri Lanka." target="_blank">
+            <Link
+              href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in planning a trip to Sri Lanka.`}
+              target="_blank"
+            >
               Plan Your Trip
             </Link>
           </Button>

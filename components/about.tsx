@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { MapPin, UserCheck, Calendar, Headphones } from "lucide-react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const features = [
   {
@@ -35,7 +36,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Image Collage */}
-          <div className="w-full lg:w-1/2 relative">
+          <ScrollReveal className="w-full lg:w-1/2 relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4 mt-12">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg transform transition hover:-translate-y-2 duration-500">
@@ -56,10 +57,10 @@ export function About() {
             </div>
             {/* Decorative Circle */}
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-luxvio-teal/5 rounded-full blur-3xl" />
-          </div>
+          </ScrollReveal>
 
           {/* Content */}
-          <div className="w-full lg:w-1/2 space-y-8">
+          <ScrollReveal delay={150} className="w-full lg:w-1/2 space-y-8">
             <div>
               <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">Who We Are</span>
               <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3 leading-tight">
@@ -85,7 +86,7 @@ export function About() {
                 </div>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

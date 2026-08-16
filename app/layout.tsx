@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Poppins, Inter, Dancing_Script } from "next/font/google"
 import Script from "next/script"
+import { Toaster } from "@/components/ui/sonner"
+import { getSiteSettings } from "@/lib/data/site-settings"
 import "./globals.css"
 
 const poppins = Poppins({
@@ -52,11 +54,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const settings = await getSiteSettings()
+
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} ${inter.variable} ${dancingScript.variable} font-sans antialiased bg-background text-foreground`}>
@@ -75,6 +79,7 @@ export default function RootLayout({
           `}
         </Script>
         {children}
+        <Toaster />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -89,7 +94,7 @@ export default function RootLayout({
                 "addressCountry": "LK"
               },
               "priceRange": "$$$",
-              "telephone": "+94717777959"
+              "telephone": `+${settings.phoneNumber}`
             })
           }}
         />

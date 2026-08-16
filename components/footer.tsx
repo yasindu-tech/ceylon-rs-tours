@@ -1,8 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react"
+import { Facebook, Instagram, MessageCircle, Phone, Mail, MapPin } from "lucide-react"
+import { getSiteSettings } from "@/lib/data/site-settings"
+import { formatPhoneDisplay } from "@/lib/format"
+import { TripAdvisorWidget } from "@/components/tripadvisor-widget"
 
-export function Footer() {
+const CONTACT_EMAIL = "luxvioceylon@gmail.com"
+const CONTACT_ADDRESS = "Mayakaduwa Road, Imaduwa, Galle"
+
+export async function Footer() {
+  const settings = await getSiteSettings()
+
   return (
     <footer className="bg-luxvio-charcoal text-white border-t border-white/10">
       <div className="container mx-auto px-4 py-16">
@@ -28,35 +36,22 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="https://www.facebook.com/share/1C4uJhoejP/?mibextid=wwXIfr"
+                href={settings.socials.facebook}
                 target="_blank"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </Link>
               <Link
-                href="https://www.instagram.com/luxvio_ceylon?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                href={settings.socials.instagram}
                 target="_blank"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </Link>
+              <TripAdvisorWidget className="flex items-center" />
               <Link
-                href="https://www.tripadvisor.com/Attraction_Review-g297896-d34040771-Reviews-Luxvio_Ceylon-Galle_Galle_District_Southern_Province.html"
-                target="_blank"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors p-2"
-              >
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/tripadvisor.png"
-                    alt="TripAdvisor"
-                    fill
-                    className="object-contain invert brightness-0"
-                  />
-                </div>
-              </Link>
-              <Link
-                href="https://wa.me/94717777959"
+                href={settings.socials.whatsapp}
                 target="_blank"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-luxvio-gold transition-colors"
               >
@@ -66,15 +61,31 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {["About Us", "Our Packages", "Gallery", "Travel Blog", "Contact Us"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-white/60 hover:text-luxvio-gold transition-colors text-sm">
-                    {item}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="font-serif text-lg font-semibold mb-6">Get in Touch</h4>
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  href={settings.socials.whatsapp}
+                  target="_blank"
+                  className="flex items-start gap-3 text-white/60 hover:text-luxvio-gold transition-colors text-sm"
+                >
+                  <Phone className="w-4 h-4 mt-0.5 shrink-0 text-luxvio-gold" />
+                  <span>{formatPhoneDisplay(settings.phoneNumber)}</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="flex items-start gap-3 text-white/60 hover:text-luxvio-gold transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-luxvio-gold" />
+                  <span>{CONTACT_EMAIL}</span>
+                </Link>
+              </li>
+              <li className="flex items-start gap-3 text-white/60 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-luxvio-gold" />
+                <span>{CONTACT_ADDRESS}</span>
+              </li>
             </ul>
           </div>
 

@@ -3,23 +3,26 @@ import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Packages } from "@/components/packages"
 import { Gallery } from "@/components/gallery"
-import { Testimonials } from "@/components/testimonials"
-import { Contact } from "@/components/contact"
+import { TripAdvisorReviews } from "@/components/tripadvisor-reviews"
 import { Footer } from "@/components/footer"
 import { TaxiService } from "@/components/taxi-service"
+import { WhatsAppLauncher } from "@/components/whatsapp-launcher"
+import { getSiteSettings } from "@/lib/data/site-settings"
 
-export default function Home() {
+export default async function Home() {
+  const settings = await getSiteSettings()
+
   return (
     <main className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar whatsappNumber={settings.phoneNumber} />
       <Hero />
       <About />
       <Packages />
       <TaxiService />
       <Gallery />
-      <Testimonials />
-      <Contact />
+      <TripAdvisorReviews />
       <Footer />
+      <WhatsAppLauncher whatsappNumber={settings.phoneNumber} />
     </main>
   )
 }

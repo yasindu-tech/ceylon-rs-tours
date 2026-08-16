@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 const galleryImages = [
   {
@@ -67,10 +68,10 @@ export function Gallery() {
   return (
     <section id="gallery" className="py-24 bg-luxvio-cream">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <ScrollReveal className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">Travel Gallery</span>
           <h2 className="font-cursive text-5xl md:text-6xl font-bold text-luxvio-teal mt-3">Our Happy Travelers</h2>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
           {visibleImages.map((img, i) => (

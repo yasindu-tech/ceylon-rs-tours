@@ -2,16 +2,19 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Car, Plane, MapPin, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { getSiteSettings } from "@/lib/data/site-settings"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
-export function TaxiService() {
-    const whatsappNumber = "94778574816"
+export async function TaxiService() {
+    const settings = await getSiteSettings()
+    const whatsappNumber = settings.phoneNumber
 
     return (
         <section id="taxi-service" className="py-24 bg-luxvio-cream relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     {/* Content */}
-                    <div className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
+                    <ScrollReveal className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
                         <div>
                             <span className="text-luxvio-gold font-semibold tracking-wider uppercase text-sm">
                                 Premium Transport
@@ -73,10 +76,10 @@ export function TaxiService() {
                                 Book Your Ride <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                         </Button>
-                    </div>
+                    </ScrollReveal>
 
                     {/* Image */}
-                    <div className="w-full lg:w-1/2 order-1 lg:order-2 relative">
+                    <ScrollReveal delay={150} className="w-full lg:w-1/2 order-1 lg:order-2 relative">
                         <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
                             <Image
                                 src="/luxury-taxi-sri-lanka.png"
@@ -93,7 +96,7 @@ export function TaxiService() {
                         {/* Decorative Elements */}
                         <div className="absolute -z-10 top-10 -right-10 w-64 h-64 bg-luxvio-gold/20 rounded-full blur-3xl" />
                         <div className="absolute -z-10 -bottom-10 -left-10 w-64 h-64 bg-luxvio-teal/20 rounded-full blur-3xl" />
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>
