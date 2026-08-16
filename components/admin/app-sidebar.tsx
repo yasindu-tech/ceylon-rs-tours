@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { LayoutDashboard, Package, Settings, Users, LogOut } from "lucide-react"
+import { LayoutDashboard, Package, Tag, Settings, Users, LogOut } from "lucide-react"
 import {
   Sidebar,
   SidebarContent,
@@ -19,6 +19,7 @@ import { ADMIN_SEGMENT } from "@/lib/admin-config"
 const NAV_ITEMS = [
   { href: `/${ADMIN_SEGMENT}/dashboard`, label: "Dashboard", icon: LayoutDashboard },
   { href: `/${ADMIN_SEGMENT}/packages`, label: "Packages", icon: Package },
+  { href: `/${ADMIN_SEGMENT}/prices`, label: "Prices", icon: Tag },
   { href: `/${ADMIN_SEGMENT}/settings`, label: "Settings", icon: Settings },
   { href: `/${ADMIN_SEGMENT}/accounts`, label: "Accounts", icon: Users },
 ]
